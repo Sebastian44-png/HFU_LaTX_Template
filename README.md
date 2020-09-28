@@ -1,1 +1,1 @@
-# HFU_LaTX_Template
+# Template für LaTex
