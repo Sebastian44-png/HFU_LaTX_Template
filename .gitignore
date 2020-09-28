@@ -5,7 +5,7 @@
 *.fls
 *.out
 *.toc
-<<<<<<< HEAD
 *.synctex.gz
-=======
->>>>>>> d80325467778d9025f75448a2beabad2554152e5
+*.blg
+*.bbl
+*.fdb_latexmk
