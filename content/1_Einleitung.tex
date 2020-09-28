@@ -1,0 +1,59 @@
+%!TEX root = ../main.tex
+
+\chapter{Einleitung}\label{chap:Einleitung}
+
+\section{Blind Text}
+
+\blindtext[5]
+
+\section{Beispiel Tabelle}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\hline
+		\textbf{Head1} & \textbf{Head2} & \textbf{Head3} \\ 
+		\hline
+		\hline 
+		
+		Val1 & Val2 & Val3 \\
+		Val4 & Val5 & Val6 \\
+		Val7 & Val8 & Val9 \\
+		
+		\hline
+	\end{tabular} 
+	\caption{Besipielüberschrift}
+	\label{tab:Qualitätswerte}
+\end{table}
+
+\section{Beispiel Pseudocode}
+
+\begin{algorithm}
+	\caption{Bubble sort}
+	\label{alg:bubblesort}
+	\begin{algorithmic}[1]
+		\STATE{\textbf{input}: Nicht sortierte Liste A[]}
+		\STATE{\textbf{output}: Sortiertes A[]}
+        \STATE{N = length(A)}
+        \FOR{j = 1 to N}
+			\FOR{i = 0 to N-1}
+				\IF{A[i] > A[i+1]}
+				\STATE{temp = A[i]}
+				\STATE{A[i] = A[i+1]}
+				\STATE{A[i+1] = temp}
+				\ENDIF
+			\ENDFOR
+        \ENDFOR
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Besipiel für eine Formel mit Konditionen}
+
+\begin{equation*}
+	E = mc^2
+\end{equation*}
+\begin{conditions}
+	E	&	Energie \\
+	m	&	Masse \\
+	c	&	Lichtgeschwindigkeit  
+\end{conditions}

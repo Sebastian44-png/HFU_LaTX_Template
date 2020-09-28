@@ -1,0 +1,49 @@
+\documentclass[
+twoside,
+fontsize=12pt,          % default font size 12pt
+paper=a4,               % DIN A4 page format
+numbers=noenddot,       % remove dots behind chapter numbers (e.g. 1.5 not 1.5.)
+listof=totoc,           % add list of figures, tables, etc. to ToC
+listof=entryprefix,     % add entry name to figures, tables, etc.
+listof=nochaptergap,    % no chapter gap for figures, tables, etc.
+headings=optiontoheadandtoc,
+bibliography=totoc,     % add bibliography to ToC but without a chapter number
+parskip=half           % half line spacing between paragraphs
+]{scrbook}
+
+\input{preamble}% load preamble
+
+\begin{document}
+
+\include{framework/Deckblatt}% title page
+% Roman numbering
+\frontmatter
+
+\pagenumbering{Roman}
+
+\include{framework/Kurzfassung}
+\include{framework/Eidesstaatliche_Erklaerung}
+\tableofcontents
+\listoffigures
+\include{framework/Abkuerzungsverzeichnis}
+
+% Content
+\mainmatter
+
+\include{content/1_Einleitung}
+\include{content/2_Grundlagen}
+\include{content/3_StandTechnik}
+\include{content/4_Zielsetung}
+\include{content/5_Konzept}
+\include{content/6_Implementierung}
+\include{content/7_Ergebnisse}
+\include{content/8_ZusammenfassungAusblick}
+
+% Bibliography
+\backmatter
+\bibliographystyle{unsrt}
+\bibliography{sample}
+
+ 
+
+\end{document}

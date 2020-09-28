@@ -1,0 +1,133 @@
+\usepackage[onehalfspacing]{setspace}
+\usepackage{geometry}
+\geometry{
+	top = {3cm},	
+	bottom = {3cm},	
+	left = {2cm},
+	right = {2.5cm}, 
+	bindingoffset = {1.5cm}
+}
+\raggedbottom
+% ##################################################
+% DOCUMENT VARIABLES
+% ##################################################
+% Personal data
+\newcommand{\docAuthor}{Name Author}
+\newcommand{\docMatriculationNumber}{}
+\newcommand{\docStudyProgram}{Name Studiengang}
+\newcommand{\docStreetName}{Musteradresse}
+\newcommand{\docPostalCode}{Plz}
+\newcommand{\docCity}{Stadt}
+\newcommand{\docEmail}{email}
+
+% Document data
+\newcommand{\docTitle}{Titel}
+\newcommand{\docSubTitle}{Untertitel}     % leave empty to remove
+\newcommand{\docType}{Art der Arbeit}
+\newcommand{\docSupervisor}{Name Erstprüfer}
+\newcommand{\docCoSupervisor}{Name Zweitprüfer}
+\newcommand{\docCompany}{Name Unternehmen}
+\newcommand{\docFakulty}{Name Fakultät}
+\newcommand{\docDeadline}{Datum}
+
+% ##################################################
+% Packages
+% ##################################################
+\usepackage{color}
+\usepackage{cite}
+\usepackage{acronym}
+
+\makeatletter
+\AtBeginDocument{%
+	\renewcommand*{\AC@hyperlink}[2]{%
+		\begingroup
+		\hypersetup{hidelinks}%
+		\hyperlink{#1}{#2}%
+		\endgroup
+	}%
+}
+\makeatother
+
+\usepackage{graphicx}       
+\graphicspath{{pictures/}}  % default image path
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage[table]{xcolor}
+\usepackage{svg}
+\usepackage[Funktion]{algorithm}
+\usepackage{algorithmic}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\slshape \leftmark}
+
+\usepackage[inline]{enumitem}
+\usepackage{breakurl}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\newtheorem{definition}{Definition}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgf}
+\usepackage[breaklinks,
+			pdfborderstyle={/S/U/W 1}]{hyperref}
+			
+\hypersetup{
+	linkbordercolor = {blue},
+	linkcolor = {blue}
+}					
+
+\newenvironment{conditions}[1][mit:]
+  {#1 \begin{tabular}[t]{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\\[\belowdisplayskip]}
+
+
+% ##################################################
+% SOURCE CODE LISTINGS (Listings Package)
+% ##################################################
+\usepackage{listings}
+\usepackage[scaled=.9]{beramono}% typewriter font
+
+\renewcommand{\lstlistingname}{Code-Beispiel}
+\def\lstlistingautorefname{Code-Beispiel}
+\renewcommand{\lstlistlistingname}{Quellcode-Verzeichnis}   %
+\newcommand{\listoflolentryname}{\lstlistingname}   % prefix for List of Code Listings
+
+% define colors for source code highlighting
+\definecolor{myblue}{rgb}{0.298, 0.447, 0.69}
+\definecolor{myblue2}{rgb}{0.1, 0.7, 1}
+\definecolor{myorange}{rgb}{0.867, 0.518, 0.322}
+\definecolor{mygreen}{rgb}{0.333, 0.659, 0.408}
+\definecolor{myred}{rgb}{0.769, 0.306, 0.322}
+\definecolor{mypurpel}{rgb}{0.506, 0.447, 0.702}
+\definecolor{mygray}{rgb}{0.9, 0.9, 0.9}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+% set source code style
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{mygreen},
+    keywordstyle=\bfseries\color{myblue},
+    numberstyle=\tiny\color{mygray},
+    stringstyle=\color{myred},
+    basicstyle=\scriptsize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    escapeinside={(*@}{@*)}
+}
+\lstset{style=codestyle, numberbychapter=false}
+
